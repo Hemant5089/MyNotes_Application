@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyNotes" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary color for the app bar and other primary elements. -->
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryVariant">@color/red</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Other color customizations -->
+        <item name="colorSecondary">@color/red</item>
+    </style>
+
+    <!-- Main application theme, extending the base theme. -->
+    <style name="Theme.MyNotes" parent="Base.Theme.MyNotes"/>
+
+    <!-- Splash screen settings for Android 12 and above -->
+    <style name="SplashApi" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@android:color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/filter__1_</item>
+        <item name="windowSplashScreenIconBackgroundColor">@android:color/white</item>
+        <item name="postSplashScreenTheme">@style/Theme.MyNotes</item>
+    </style>
+
+    <!-- Style for progress bars, if needed. -->
+    <style name="Progressbar">
+        <item name="colorSecondary">@color/red</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Model</item>
+    </style>
+
+    <style name="Model" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/delete_sheet</item>
+    </style>
+</resources>

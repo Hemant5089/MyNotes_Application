@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/bottom_sheet"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="90dp"
+        android:id="@+id/view"
+        android:layout_height="8dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/delete_indicater_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/product_sans_regular"
+        android:textColor="@color/black"
+        android:text="Are you sure want to delete\n this Note?"
+        android:textSize="18sp"
+        android:id="@+id/asking"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/no_indicater"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/no_delete"
+        android:fontFamily="@font/product_sans_regular"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="No!"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asking"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/yes_indicater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yes_delete"
+        android:fontFamily="@font/product_sans_regular"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="yes!"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/no_indicater"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/no_indicater" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
